@@ -1,0 +1,116 @@
+<html>
+    <head>
+          <title>Curso Javascript</title>
+    </head>
+    <body>
+          <script>
+              //function nome da função dentro do colchetes são os parametros
+              // dentro chaves o corpo da função e o que ela vai executar ao ser chamada recebo quantos parametros quiser e nem preciso informar o tipo
+              function retornasexo (sexo){
+                  //M ou F
+                  //Masculino ou Feminino
+                  if(sexo === 'M'){
+                    return 'Masculino'
+
+                  } else if(sexo === 'F'){
+                    return 'Feminino'
+
+                  } else{
+                    return 'Outro'
+                  }
+              };
+
+              function valorsexo(sexo){
+
+                switch(sexo){
+                  case 'M':
+                    return 'Masculino';
+
+                  case 'F':
+                    return 'Feminino';
+
+                  default: 
+                    return 'Outro';    
+                }
+
+              };
+               var resultado = retornasexo ('asdsa');
+               console.log(resultado);
+
+               var resultado2 = valorsexo('ashda');
+               console.log(resultado2);
+               //if(1 == '1') true, valor igual tipo diferente
+               //if(1 === '1') false valor igual mas tipo diferente
+               //AND, OR, NOT
+
+               var sexo = 'F', idade = 30;
+
+               if (sexo === 'M' && idade > 18){
+                  console.log('Ok')
+               }  else if(sexo === 'M' || idade <18){
+                     console.log ('Oks')
+               }  else if ( sexo !== 'M'){
+                  console.log('Okss')
+
+               };
+
+               var masculino;
+
+               if(sexo === 'M' ){
+                  masculino = true;
+               }else{
+                 masculino = false;
+               }; console.log(masculino);
+              
+               // não precisa nem dos parenteses
+               var masculino = (sexo !== 'M');
+               console.log(masculino);
+
+//Condição ternária se aplica quando se tem um if e logo depois um else ou seja só tem duas verificações dentro do IF
+//se está validando uma condição ou não está                     
+            /*  if(sexo === 'M' ){
+                  return 'Masculino';
+               }else{
+                 return 'Feminino';
+               };  */
+//Reduzindo o codigo em condição ternaria
+// ? interrogação resultado da primeira condição e dois pontos segundo valor, que não é satisfatorio a nossa condição 
+//return(sexo === 'M') ? 'Masculino' : 'Feminino';
+               var retorno = (sexo === 'M') ? 'Masculino' : 'Feminino';
+                     console.log(retorno);
+
+                //for while 
+                // 1 valor inicial var, 2 a condição 
+                //usar for sempre que souber o tamanho do intervalo
+                for(var i = 0; i <=10; i++){
+                      console.log(i);
+                } console.log(i);
+
+                //usar while quando n sabe quantas vezes o fluxo vai ser executado
+                  var cont = 1005;
+                while(cont > 50){
+                  console.log(cont);
+
+                  cont /= 5
+                  
+                
+                 console.log(cont);
+                }
+//intervalo e timeout
+//intervalo no js é uma função que executa dentro de um intervalo 
+                    function exibeAlgo(){
+                      console.log('Hello World');
+                    }
+//()dentro passo o nome de uma função
+                      setInterval( exibeAlgo, 1000 );
+                    //setInterval( exibeAlgo(), 1000 ); n usei o abre e fecha parentes logo apos função
+                    //porque vai estar executando a função aqui apenas uma vez, e não estar referenciando
+                    //a função. referenciar passar escopo pra outro local eu n utilizo ()
+
+// o setTimeout vai executar apenas uma vez porém vai dar um delay de 2 segundos nesse caso vai dari
+// de quantos segundo a gnt colocar antes de executar a função
+                    setTimeout(exibeAlgo, 2000);
+
+               </script>
+    </body>
+</html>
