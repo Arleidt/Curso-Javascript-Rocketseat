@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+
+      <div id="app">
+        <button onmouseover="mostraAlerta()">Me pressione</button>
+        <button onclick="mostraAlerta2()">Me pressione novamente</button>
+        <button>Me pressione novamente</button>
+        <input onkeypress="mostraAlerta3()"/>
+        <!--referenciando do html para o Javascript-->
+          <input type="text" name="nome" id="nomes" class="nomess"/>
+          <button class="botaos">Adicionar</button>
+      </div>
+
+      <script>
+          function mostraAlerta(){
+            //alert function global js para mostra alerta em tela
+            alert('Passou mouse por cima');
+          }
+
+          function mostraAlerta2(){
+            //alert function global js para mostra alerta em tela
+            alert('Botão foi clicado');
+          }
+
+          function mostraAlerta3(){
+            //alert function global js para mostra alerta em tela
+            alert('Botão teclado pressionado');
+          }
+          
+          //buscando elemento na DOM document referencia toda a arvore 
+          //do html elementos
+          //getElementById busque um elemento com id nome
+          var inputElement = document.getElementById('nomes');
+          console.log(inputElement);
+          //input sempre retorna um vetor se quero primeiro input posso
+          //passar no final com [0] se eu não passar nada e tiver mais que
+          //um input ele vai vir um htmlCollection com os inputs dentro
+          var inputTagName = document.getElementsByTagName('input')[0];
+          //clase não é unica vai retornar tb um vetor
+          var inputClass = document.getElementsByClassName('nomess');
+
+          //buscar elementos na DOM através do querySelector
+          //querySelector deixa percorrer a DOM até encontrar o elemento
+          //Posso dizer exatamente onde está o input 'body div#app input'
+          //posso simplicar pq body sempre vai existir e tira-lo
+          var inputQuerySelector = document.querySelector('div#app input');
+          //Buscando name=nome
+          var inputQuerySelectorName = document.querySelector('input[name=nome]');
+          //retornando primeiro input, retorna sempre um unico elemento
+          var inputQueryInput = document.querySelector('input');
+          //retornando mais de um elemento em uma lista se tiver mais de um input
+          var inputQueryInput = document.querySelectorAll('input');
+
+          //pegando texto em tela para mostrar escrito dentro do botão
+          var inputElement = document.querySelector('input[name=nome]');
+          //referenciando função onClick pelo JS
+          var btnElement = document.querySelector('button.botaos');
+            btnElement.onclick = function(){
+              //recuperando texto escrito dentro do botão
+              var texto = inputElement.value;
+              alert(texto);
+
+              //alert('Botões Clicados');
+            }
+      </script>
+    </body>
+</html>
+
