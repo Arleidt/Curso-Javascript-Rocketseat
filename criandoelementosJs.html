@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+
+      <div id="app">
+        <!--referenciando do html para o Javascript-->
+         
+      </div>
+
+      <script>
+         //criando elementos,('a') criando link
+         var linkElement = document.createElement('a');
+
+         linkElement.setAttribute('href','https://www.google.com.br/');
+         //criando titulo 
+         linkElement.setAttribute('title','Site da Google');
+        //criando texto
+        var textElement = document.createTextNode('Acessar Google');
+        //posicionando textElement dentro do linkElements  com o link
+        //adicionando textElement como filho do linkElements
+        linkElement.appendChild(textElement);
+        //vou ter <a href="https://www.google.com.br/">Acessar Google</a>
+
+        //jogando link dentro do corpo do HTML
+        //referenciando div app
+        //var containerElement = document.getElementById
+        var containerElement = document.querySelector('#app');
+        //jogando link dentro do corpo
+        containerElement.appendChild(linkElement);
+
+      </script>
+    </body>
+</html>
+
