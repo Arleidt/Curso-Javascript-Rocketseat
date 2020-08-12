@@ -14,9 +14,9 @@ mongoose.connect(
 //npm install require-dir faz require em um diretorio em todos os arq automaticamente
 requireDir('./src/models');
 
-const Product = mongoose.model('Product');
+//const Product = mongoose.model('Product');
 
-//primeira rota
+/* //primeira rota
 app.get('/', (req, res) => {
   Product.create({title: 'React Native',
    description: 'Build native apps with React',
@@ -24,7 +24,9 @@ app.get('/', (req, res) => {
   });
 
   res.send("Hello World");
-});
-  
+}); */
+
+//Rotas
+app.use('/api', require('./src/routes'));  
 
 app.listen(3002);
